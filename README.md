@@ -1,3 +1,12 @@
+'''
+#To run this app, first run this command to install dependencies:
+npm install
+
+#then start the app with 
+npm run android:dev 
+'''
+(make sure it's defined in your package.json), and ensure your environment has Node.js, Java JDK, Android Studio with SDK, and a connected device or emulator
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
