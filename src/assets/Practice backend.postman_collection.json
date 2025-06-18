@@ -1,0 +1,1834 @@
+{
+	"info": {
+		"_postman_id": "ca4e1acf-3ae8-4e7d-b6e2-bd5bf8a42780",
+		"name": "Practice backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6322703"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Fouad",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Bakkour",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "fouad.b+1@euriskomobility.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123123123",
+							"type": "text"
+						},
+						{
+							"key": "profileImage",
+							"type": "file",
+							"src": "/Users/fouadbakour/Desktop/Screenshot 2025-05-12 at 1.36.52 PM.png",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{https}}/api/auth/signup",
+					"host": [
+						"{{https}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "signup",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstName",
+									"value": "Fouad",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Bakkour",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "fouad.b+2@euriskomobility.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123123",
+									"type": "text"
+								},
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "/Users/fouadbakour/Desktop/Screenshot 2025-05-12 at 1.36.52 PM.png",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{https}}/api/auth/signup",
+							"host": [
+								"{{https}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 May 2025 13:19:55 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "110"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"6e-q7NHe6wZ0Pl3bxNJYMUOSou2IHA\""
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=dck9gA75Dwr4z9DMdztmlEWYNb%2BITKOU%2Fx2Fis8Pim%2B%2Bp9kA4bBOxCUJJ9Z7A0dC0K%2FyYbIazAvQyyH4FeTfs7ztXr%2FhJzQTvQ0pvpdNrCOENj5FDReJwpuo%2BhephTxPHqRogBhug%2BTXhd4VAvc%3D\"}]}"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "93ea35d9d861e288-MRS"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"message\": \"User created successfully. Please check your email for verification OTP.\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "verify OTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"fouad.b+1@euriskomobility.com\",\n    \"otp\": \"703031\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{https}}/api/auth/verify-otp",
+					"host": [
+						"{{https}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"verify-otp"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "verify OTP",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"fouad.b+1@euriskomobility.com\",\n    \"otp\": \"703031\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{https}}/api/auth/verify-otp",
+							"host": [
+								"{{https}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"verify-otp"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 May 2025 13:20:12 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"58-QIDWwmupbTU9eKHQqhEHTge56pA\""
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=iHgzCsaGjM%2BDMaEK3m8qNI7HEhFRknzDHvfjPbhTL7tqSZfW7%2Fl6nge6JOnLhwTzquLf9eSX4SWYMj10Gz8fMuRn3ec3uolSir%2B0eUelA%2BEtW8v7omEjEqD%2F34BRymrESzgSumKXTub2Ah5O4Fk%3D\"}]}"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "93ea364e78dee288-MRS"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"message\": \"Email verified successfully\",\n        \"isEmailVerified\": true\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "resend verification otp (optional)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"fouad.b+2@euriskomobility.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{https}}/api/auth/resend-verification-otp",
+					"host": [
+						"{{https}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"resend-verification-otp"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"fouad.b+2@euriskomobility.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{https}}/api/auth/resend-verification-otp",
+							"host": [
+								"{{https}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"resend-verification-otp"
+							]
+						}
+					},
+					"status": "Too Many Requests",
+					"code": 429,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 May 2025 13:21:17 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "103"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"67-xWyebTEVrXhe5tJQMBXqYwz9XL0\""
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=je0MkrJo9t%2FVkzYKR2HVzTs2%2Fpg6CKC5uMPvCVoGNdR%2BbsA%2FQjM9PxDBIHFtZ2EJ9ANbElgUujNovhwUhMo9Dt0Fdc2Blvd8Hz4WxksiUQufVxBusT6cg5gZYw7QmreI%2BH4WLLsd17LfeN06lV4%3D\"}]}"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "93ea37e2ec54e288-MRS"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"error\": {\n        \"statusCode\": 429,\n        \"message\": \"OTP still valid until 2025-05-12T13:21:35.233Z\"\n    }\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"fouad.b+2@euriskomobility.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{https}}/api/auth/resend-verification-otp",
+							"host": [
+								"{{https}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"resend-verification-otp"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 May 2025 13:21:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"48-j/LTLOue5u9BIIYB994S10rGPgY\""
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=DfimSq3daQdUnnL0vmU%2B2FEDvVtc6FUufhbx3JQtVetGgpHlNN2qcTdOipZ662h4sDZfN0fQl6p6%2Bmx9Y0hlnE8BmHsm4bTCywcIfHPhn0TeVUQ9%2FmNRDbEtuHEJhoxpwhSSKbcqxaMappghFGE%3D\"}]}"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "93ea38a649f3e288-MRS"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"message\": \"Verification OTP sent successfully\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"fouad.b+1@euriskomobility.com\",\n  \"password\": \"123123123\",\n  \"token_expires_in\": \"1y\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{https}}/api/auth/login",
+					"host": [
+						"{{https}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"fouad.b+1@euriskomobility.com\",\n  \"password\": \"123123123\",\n  \"token_expires_in\": \"1y\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{https}}/api/auth/login",
+							"host": [
+								"{{https}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 May 2025 13:22:11 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "389"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"185-Vd+/DVfjK6jrWg1dIz4PqGXENUY\""
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=4caZYwTOJvSx2C0f89A1MYni3dhAXxg9kS8xcb60VediXKYzwbgUONTwQuj0ElQb60Fi%2F9L9E5HN3gaAMsYkZLiuhGcWBC9b1c6BTIawcq9OYcGuqvvbSvc56O%2FhYEfleRsfekr7BjNULx6Px0k%3D\"}]}"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "93ea393208f0e288-MRS"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODIxZjU3YTNmYzBiMGZkYTE5MjIzZDciLCJpYXQiOjE3NDcwNTYxMzEsImV4cCI6MTc3ODYxMzczMX0.0dHR_KLQnnHoABwXcaMm0X8BPePYu2zIytLmf1xqkG4\",\n        \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODIxZjU3YTNmYzBiMGZkYTE5MjIzZDciLCJpYXQiOjE3NDcwNTYxMzF9.qsqOEIXaJUB9uGw0nA6Z02CESvmbtmNd0u8Cnf1E1oc\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODIxZjU3YTNmYzBiMGZkYTE5MjIzZDciLCJpYXQiOjE3NDcwNTYyOTQsImV4cCI6MTc3ODYxMzg5NH0.ce6SqdbWnnyfQt0RuiKD3asatmvmnmmtECmHLyJbB0w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"fouad.b+7@euriskomobility.com\",\n  \"password\": \"123123123\",\n  \"token_expires_in\": \"1y\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{https}}/api/user/profile",
+					"host": [
+						"{{https}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get profile",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"fouad.b+7@euriskomobility.com\",\n  \"password\": \"123123123\",\n  \"token_expires_in\": \"1y\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{https}}/api/user/profile",
+							"host": [
+								"{{https}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 May 2025 13:22:37 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "229"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"e5-4V0BvVTB5/kTe4w5Lnk9YT2X1Es\""
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=0f%2FimuLQLspkO5u6wjOScOFVf2t2%2BBNbUEBzh%2BwbrHS3bRSNCzYTWhSw3XjvQ7h%2BVGR5EtrpQ%2FS1N6yoObu5p2F8Kp9Gw7QK4ycWv6KdQs2Mh97UPFLnyRcOT8jidJpKEHHVnuPITWhr1wcnAxQ%3D\"}]}"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "93ea39d70b95e288-MRS"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"user\": {\n            \"id\": \"6821f57a3fc0b0fda19223d7\",\n            \"email\": \"fouad.b+1@euriskomobility.com\",\n            \"firstName\": \"Fouad\",\n            \"lastName\": \"Bakkour\",\n            \"profileImage\": null,\n            \"isEmailVerified\": true,\n            \"createdAt\": \"2025-05-12T13:19:54.106Z\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "update profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODIxZjU3YTNmYzBiMGZkYTE5MjIzZDciLCJpYXQiOjE3NDcwNTYyOTQsImV4cCI6MTc3ODYxMzg5NH0.ce6SqdbWnnyfQt0RuiKD3asatmvmnmmtECmHLyJbB0w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Fouad ds",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Bakkour",
+							"type": "text"
+						},
+						{
+							"key": "profileImage",
+							"type": "file",
+							"src": "/Users/fouadbakour/Desktop/Screenshot 2025-05-12 at 4.09.51 PM.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local}}/api/user/profile",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update profile",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstName",
+									"value": "Fouad ds",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Bakkour",
+									"type": "text"
+								},
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "/Users/fouadbakour/Desktop/Screenshot 2025-05-12 at 4.09.51 PM.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/api/user/profile",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "285"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11d-Mq3sVQirzZHlzsgfUkq68GLSmtc\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 May 2025 13:27:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"message\": \"Profile updated successfully\",\n        \"user\": {\n            \"id\": \"6821f57a3fc0b0fda19223d7\",\n            \"email\": \"fouad.b+1@euriskomobility.com\",\n            \"firstName\": \"Fouad ds\",\n            \"lastName\": \"Bakkour\",\n            \"profileImage\": {\n                \"url\": \"/uploads/profiles/1747056434331-510441995.png\"\n            },\n            \"isEmailVerified\": true\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "forgot password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"fouad.b+1@euriskomobility.com\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{https}}/api/auth/forgot-password",
+					"host": [
+						"{{https}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"forgot-password"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "forgot password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"fouad.b+1@euriskomobility.com\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{https}}/api/auth/forgot-password",
+							"host": [
+								"{{https}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"forgot-password"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 May 2025 13:28:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"4c-L3KP1ySKPeHDFBSJ/slF62lncEs\""
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=D%2BfI5NSazpEy6jq3WyhC91SVBSF4oXcJ2sjmRe4OC6TNv%2FLdLn831mIXBoTfcHjILg0DqxUC1sQ%2BpCR9sFDv9POIfY7j8rIKwyfcdIn0iJx9wj1fzSkbC7Zb5whqaXUGmjJ%2Fx2Z0sddEfgYw1uE%3D\"}]}"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "93ea422b9cdee1a0-MRS"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"message\": \"Password reset email sent successfully\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "refresh-token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODIxYWFkMmVmNTI2YWMyOGY3OGI4NmMiLCJpYXQiOjE3NDcwMzk5MDd9.VEY6OBvFaIfObDHGaay83ssbH0LL4_ycD1jgmK3BknA\",\n  \"token_expires_in\": \"1m\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/api/auth/refresh-token",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"refresh-token"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "refresh-token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODIxYWFkMmVmNTI2YWMyOGY3OGI4NmMiLCJpYXQiOjE3NDcwMzk5MDd9.VEY6OBvFaIfObDHGaay83ssbH0LL4_ycD1jgmK3BknA\",\n  \"token_expires_in\": \"1m\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/auth/refresh-token",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"refresh-token"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "389"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"185-3LEpqysiaMgN6NQmSRuPrRgMazI\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 May 2025 13:28:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODIxYWFkMmVmNTI2YWMyOGY3OGI4NmMiLCJpYXQiOjE3NDcwNTY1MDgsImV4cCI6MTc0NzA1NjU2OH0.KuNVAg8iw4hKwFSp3y9FuAPC9F3cX0ZnxIqtt80MQ68\",\n        \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODIxYWFkMmVmNTI2YWMyOGY3OGI4NmMiLCJpYXQiOjE3NDcwNTY1MDh9.rtvtY5tN4WrT-y1_TMFIcJRUiZ5pYSP3qlvQ7w0nklA\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "posts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODIxYWFkMmVmNTI2YWMyOGY3OGI4NmMiLCJpYXQiOjE3NDcwMzY5NjgsImV4cCI6MTc3ODU5NDU2OH0.mymRupA0eyIWQknz4Ay4PS03iiN_Gx9QIXPXApgUu-I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{https}}/api/posts?page=1&limit=10",
+					"host": [
+						"{{https}}"
+					],
+					"path": [
+						"api",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "posts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{https}}/api/posts?page=1&limit=10",
+							"host": [
+								"{{https}}"
+							],
+							"path": [
+								"api",
+								"posts"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 May 2025 13:28:34 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"3b78-jnWwExUU8ySUOh/A5hZijr2tdWo\""
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=HShrDRJHx%2BQ%2BbcMBgg3yPbWhsRka6rOOlOF3j%2Fet4yRtpK91P%2FcrWRiM8PmjyWit0x6jOLixPQDE2DSXMzqbgPDFN7cM7vPiqde4tKdVFqRlUDfK4E%2Bgr9G2AiG6eSBZNoo%2Fw7itumpmvLJx92s%3D\"}]}"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "93ea42927fd9e1a0-MRS"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"66108679cacfae4f87506e66\",\n            \"article_id\": \"c324a40d40e3e32c796f1e470badc566\",\n            \"title\": \"خطباء الجمعة| يوم القدس تثبيت لمعركة المصير والدماء الطاهرة ستنقلب على الصهاينة\",\n            \"link\": \"https://www.almanar.com.lb/11827169\",\n            \"keywords\": [\n                \"أهم أخبار لبنان\",\n                \"لبنان\",\n                \"خطباء الجمعة\",\n                \"خطبة الجمعة\"\n            ],\n            \"creator\": [\n                \"\"\n            ],\n            \"video_url\": null,\n            \"description\": \"اعتبر رئيس الهيئة الشرعية في حزب الله الشيخ محمد يزبك أن “استشراف الإمام الخميني لمستقبل الأمة الإسلامية، وركيزة الإنطلاق لعودة الأمة الى أصالتها من التوحيد ووحدة الكلمة في مواجهة الكفر والنفاق والفساد والظلم، محوره ومحور الإنطلاق القدس بأبعادها، حيث هي الفصل بين الحق والباطل، ولذلك اختار يوما لهذا المحور أطلق عليه يوم القدس ...\",\n            \"content\": \"ONLY AVAILABLE IN PAID PLANS\",\n            \"pubDate\": \"2024-04-05 11:10:02\",\n            \"image_url\": \"https://www.almanar.com.lb/framework/includes/uploads/2022/10/manar-03427890016663437441.jpg\",\n            \"source_id\": \"almanar\",\n            \"source_priority\": 104910,\n            \"source_url\": \"https://www.almanar.com.lb\",\n            \"source_icon\": null,\n            \"language\": \"arabic\",\n            \"country\": [\n                \"lebanon\"\n            ],\n            \"category\": [\n                \"top\"\n            ],\n            \"ai_tag\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"sentiment\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"sentiment_stats\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"ai_region\": \"ONLY AVAILABLE IN CORPORATE PLANS\"\n        },\n        {\n            \"_id\": \"66108679cacfae4f87506e67\",\n            \"article_id\": \"72d6d8be07acff5c5679da9917adac19\",\n            \"title\": \"تحديد موعد الانتخابات البلدية في جبل لبنان!\",\n            \"link\": \"https://www.tayyar.org/News/Lebanon/596065/\",\n            \"keywords\": [\n                \"lebanon\"\n            ],\n            \"creator\": null,\n            \"video_url\": null,\n            \"description\": \"وقّع وزير الداخلية والبلديات القاضي بسام مولوي، اليوم الجمعة، قرار دعوة الهيئات الانتخابية البلدية في دوائر محافظة جبل لبنان لانتخاب اعضاء المجالس البلدية وتحديد عدد الاعضاء لكل منها ، ولانتخاب مختارين ومجالس اختيارية وتحديد عدد المختارين والأعضاء لكل منها في دوائر محافظة جبل لبنان ، وذلك بتاريخ 12 ايار 2024.مرفق ربطا نسخه عن القرارين، بالاضافة الى قرار تقسيم وتحديد اقلام الاقتراع.\",\n            \"content\": \"ONLY AVAILABLE IN PAID PLANS\",\n            \"pubDate\": \"2024-04-05 11:09:45\",\n            \"image_url\": \"https://static.tayyar.org/Content/ResizedImages/663/423/outside/GYDZCDEALU240405021108778~.jpg\",\n            \"source_id\": \"tayyar\",\n            \"source_priority\": 164963,\n            \"source_url\": \"https://www.tayyar.org\",\n            \"source_icon\": \"https://i.bytvi.com/domain_icons/tayyar.png\",\n            \"language\": \"arabic\",\n            \"country\": [\n                \"lebanon\"\n            ],\n            \"category\": [\n                \"top\"\n            ],\n            \"ai_tag\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"sentiment\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"sentiment_stats\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"ai_region\": \"ONLY AVAILABLE IN CORPORATE PLANS\"\n        },\n        {\n            \"_id\": \"66108679cacfae4f87506e68\",\n            \"article_id\": \"1de4c5a6b847d4bc2f95e406aee3fc9c\",\n            \"title\": \"من منبر القدس.. للحضور نصيب في تسجيل المواقف\",\n            \"link\": \"https://www.almanar.com.lb/11823682\",\n            \"keywords\": [\n                \"سورية\",\n                \"عربي وإقليمي\",\n                \"منبر القدس\"\n            ],\n            \"creator\": [\n                \"\"\n            ],\n            \"video_url\": null,\n            \"description\": \"خليل موسى ضمن الفعالية المركزية ليوم القدس العالمي والتي عقدتها دول محور المقاومة في عواصمها بشكل متزامن تحت عنوان “منبر القدس” وما تخللها من كلمات لقادة المحور، سجل الحضور في دمشق مواقفهم مؤكدين على أهمية الفعالية التي انطلقت من اجل القدس، وما تشكله من رابط وهدف ومبدأ يجمع بين دول المقاومة، موجِهة كل الطاقات نحو ...\",\n            \"content\": \"ONLY AVAILABLE IN PAID PLANS\",\n            \"pubDate\": \"2024-04-05 11:09:03\",\n            \"image_url\": \"https://www.almanar.com.lb/framework/includes/uploads/2023/04/manar-05065670016814417188.jpg\",\n            \"source_id\": \"almanar\",\n            \"source_priority\": 104910,\n            \"source_url\": \"https://www.almanar.com.lb\",\n            \"source_icon\": null,\n            \"language\": \"arabic\",\n            \"country\": [\n                \"lebanon\"\n            ],\n            \"category\": [\n                \"top\"\n            ],\n            \"ai_tag\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"sentiment\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"sentiment_stats\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"ai_region\": \"ONLY AVAILABLE IN CORPORATE PLANS\"\n        },\n        {\n            \"_id\": \"66108679cacfae4f87506e69\",\n            \"article_id\": \"f008f39aa4679d3e545a6afced3cf014\",\n            \"title\": \"وزير الداخلية يحدد موعد الانتخابات البلدية في جبل لبنان في١٢ ايار\",\n            \"link\": \"https://www.nna-leb.gov.lb/ar/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9/685493\",\n            \"keywords\": null,\n            \"creator\": null,\n            \"video_url\": null,\n            \"description\": \"وطنية - وقّع وزير الداخلية والبلدياتnbsp; في حكومةnbsp; تصريف الأعمال القاضي بسام مولوي قرار دعوة الهيئات الانتخابية البلدية في دوائر محافظة جبل لبنان لانتخاب اعضاء المجالس البلدية وتحديد عدد الاعضاء لكل منها ، ولانتخاب مختارين ومجالس اختيارية وتحديد عدد المختارين والأعضاء لكل منها في دوائر محافظة جبل لبنان ، وذلك بتاريخ ١٢ ايار ٢٠٢٤. مرفق ربطا نسخة عن القرارين، بالاضافة الى قرار تقسيم وتحديد اقلام الاقتراع. nbsp; nbsp;==============\",\n            \"content\": \"ONLY AVAILABLE IN PAID PLANS\",\n            \"pubDate\": \"2024-04-05 11:05:00\",\n            \"image_url\": null,\n            \"source_id\": \"nna_leb\",\n            \"source_priority\": 1754928,\n            \"source_url\": \"https://www.nna-leb.gov.lb/ar\",\n            \"source_icon\": \"https://i.bytvi.com/domain_icons/nna_leb.png\",\n            \"language\": \"arabic\",\n            \"country\": [\n                \"lebanon\"\n            ],\n            \"category\": [\n                \"top\"\n            ],\n            \"ai_tag\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"sentiment\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"sentiment_stats\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"ai_region\": \"ONLY AVAILABLE IN CORPORATE PLANS\"\n        },\n        {\n            \"_id\": \"66108679cacfae4f87506e6a\",\n            \"article_id\": \"db1583ac5fa7ebcdf4010faf8c5b3f0d\",\n            \"title\": \"الجيش الإسرائيلي: قائد افترض خطأ أن مسلحين من حماس كانوا في مركبات \\\"وورلد سنترال كيتشن\\\" (سكاي نيوز عربية)\",\n            \"link\": \"https://ch23.com/Article/157528/الجيش-الإسرائيلي:-قائد-افترض-خطأ-أن-مسلحين-من-حماس-كانوا-في-مركبات-وورلد-سنترال-كيتشن-(سكاي-نيوز-عربية)\",\n            \"keywords\": null,\n            \"creator\": null,\n            \"video_url\": null,\n            \"description\": null,\n            \"content\": \"ONLY AVAILABLE IN PAID PLANS\",\n            \"pubDate\": \"2024-04-05 11:02:53\",\n            \"image_url\": \"https://ch23.com/site/images/error.png\",\n            \"source_id\": \"ch23\",\n            \"source_priority\": 37848027,\n            \"source_url\": \"https://ch23.com\",\n            \"source_icon\": null,\n            \"language\": \"arabic\",\n            \"country\": [\n                \"lebanon\"\n            ],\n            \"category\": [\n                \"top\"\n            ],\n            \"ai_tag\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"sentiment\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"sentiment_stats\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"ai_region\": \"ONLY AVAILABLE IN CORPORATE PLANS\"\n        },\n        {\n            \"_id\": \"66108679cacfae4f87506e6b\",\n            \"article_id\": \"1930a0796569203ffc60d74f98a18409\",\n            \"title\": \"Kuwait opposition keeps parliament majority after vote\",\n            \"link\": \"https://www.naharnet.com/stories/en/304418-kuwait-opposition-keeps-parliament-majority-after-vote\",\n            \"keywords\": null,\n            \"creator\": [\n                \"Naharnet Newsdesk\"\n            ],\n            \"video_url\": null,\n            \"description\": \"Opposition lawmakers maintained a majority in Kuwait's parliament, results showed Friday, after the Gulf state's third parliamentary vote in as many years held just months into the new emir's reign. Opposition candidates won 29 seats in the 50-member assembly, according to results carried by the official KUNA news agency, matching the outcome of last year's election.\",\n            \"content\": \"ONLY AVAILABLE IN PAID PLANS\",\n            \"pubDate\": \"2024-04-05 11:01:00\",\n            \"image_url\": \"http://images2.naharnet.com/images/260479/w140.jpg?1712314844\",\n            \"source_id\": \"naharnet\",\n            \"source_priority\": 145159,\n            \"source_url\": \"https://www.naharnet.com\",\n            \"source_icon\": \"https://i.bytvi.com/domain_icons/naharnet.png\",\n            \"language\": \"english\",\n            \"country\": [\n                \"lebanon\"\n            ],\n            \"category\": [\n                \"top\"\n            ],\n            \"ai_tag\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"sentiment\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"sentiment_stats\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"ai_region\": \"ONLY AVAILABLE IN CORPORATE PLANS\"\n        },\n        {\n            \"_id\": \"66108679cacfae4f87506e6c\",\n            \"article_id\": \"77a202d96791d0411f304417a263e314\",\n            \"title\": \"Reese Witherspoon تعمل على مسلسل Legally Blonde مع Amazon\",\n            \"link\": \"https://me.ign.com/ar/legally-blonde/173337/news/reese-witherspoon-tml-l-mslsl-legally-blonde-m-amazon\",\n            \"keywords\": [\n                \"افلام\",\n                \"legally blonde\",\n                \"tv\",\n                \"أخبار\",\n                \"entertainment\"\n            ],\n            \"creator\": null,\n            \"video_url\": null,\n            \"description\": \"الحبكة لا تزال سرية حتى الآن.\",\n            \"content\": \"ONLY AVAILABLE IN PAID PLANS\",\n            \"pubDate\": \"2024-04-05 11:00:32\",\n            \"image_url\": \"https://sm.ign.com/ign_mear/news/r/reese-with/reese-witherspoon-working-on-legally-blonde-tv-series-with-a_71ns.jpg\",\n            \"source_id\": \"ign_me_ar\",\n            \"source_priority\": 121,\n            \"source_url\": \"https://me.ign.com/ar\",\n            \"source_icon\": \"https://i.bytvi.com/domain_icons/ign_me_ar.png\",\n            \"language\": \"arabic\",\n            \"country\": [\n                \"egypt\",\n                \"united arab emirates\",\n                \"syria\",\n                \"oman\",\n                \"kuwait\",\n                \"iraq\",\n                \"jordan\",\n                \"turkey\",\n                \"israel\",\n                \"lebanon\",\n                \"cyprus\",\n                \"bahrain\"\n            ],\n            \"category\": [\n                \"entertainment\"\n            ],\n            \"ai_tag\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"sentiment\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"sentiment_stats\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"ai_region\": \"ONLY AVAILABLE IN CORPORATE PLANS\"\n        },\n        {\n            \"_id\": \"66108679cacfae4f87506e6d\",\n            \"article_id\": \"59c2507268ef6b830e96a50bfc3e869b\",\n            \"title\": \"هل من علاقة لمصرف لبنان بقرار \\\"إستنسابية ردّ الودائع\\\"؟\",\n            \"link\": \"https://ch23.com/Article/157527/هل-من-علاقة-لمصرف-لبنان-بقرار-إستنسابية-ردّ-الودائع؟\",\n            \"keywords\": null,\n            \"creator\": null,\n            \"video_url\": null,\n            \"description\": null,\n            \"content\": \"ONLY AVAILABLE IN PAID PLANS\",\n            \"pubDate\": \"2024-04-05 10:58:53\",\n            \"image_url\": null,\n            \"source_id\": \"ch23\",\n            \"source_priority\": 37848027,\n            \"source_url\": \"https://ch23.com\",\n            \"source_icon\": null,\n            \"language\": \"arabic\",\n            \"country\": [\n                \"lebanon\"\n            ],\n            \"category\": [\n                \"top\"\n            ],\n            \"ai_tag\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"sentiment\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"sentiment_stats\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"ai_region\": \"ONLY AVAILABLE IN CORPORATE PLANS\"\n        },\n        {\n            \"_id\": \"66108679cacfae4f87506e6e\",\n            \"article_id\": \"82e5c895ca0b7cf966751c72c9e63d10\",\n            \"title\": \"آية الله قاسم: يوم القدس هو يومُ اجتماع كلمة الأمة الصارخة بوجوب المقاومة\",\n            \"link\": \"https://www.alahednews.com.lb/article.php?id=67685&cid=116\",\n            \"keywords\": [\n                \"الخليج والعالم\"\n            ],\n            \"creator\": [\n                \"Alahednews\"\n            ],\n            \"video_url\": null,\n            \"description\": \"كلمة الشيخ قاسم عشية يوم القدس العالمي\",\n            \"content\": \"ONLY AVAILABLE IN PAID PLANS\",\n            \"pubDate\": \"2024-04-05 10:58:16\",\n            \"image_url\": \"https://www.alahednews.com.lb/uploaded/essaysimages/small/lvl220240405015816124.jpg\",\n            \"source_id\": \"alahednews\",\n            \"source_priority\": 1887445,\n            \"source_url\": \"https://www.alahednews.com.lb\",\n            \"source_icon\": \"https://i.bytvi.com/domain_icons/alahednews.png\",\n            \"language\": \"arabic\",\n            \"country\": [\n                \"lebanon\"\n            ],\n            \"category\": [\n                \"top\"\n            ],\n            \"ai_tag\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"sentiment\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"sentiment_stats\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"ai_region\": \"ONLY AVAILABLE IN CORPORATE PLANS\"\n        },\n        {\n            \"_id\": \"66108679cacfae4f87506e6f\",\n            \"article_id\": \"b16cd5ca681597fe2d1978c92b7bb48f\",\n            \"title\": \"علي بشارة نوه باعلان منطقة الجنوب منكوبة زراعيا وطالب بتعويض المتضررين\",\n            \"link\": \"https://www.nna-leb.gov.lb/ar/%D8%A5%D9%82%D8%AA%D8%B5%D8%A7%D8%AF/685486\",\n            \"keywords\": null,\n            \"creator\": null,\n            \"video_url\": null,\n            \"description\": \"وطنية ndash; النبطية - قال رئيس اتحاد جبل عامل لنقابات العمال والمزارعين علي بشارة في بيان: quot;حسنا اعلن مجلس الوزراء تحويل منطقة الجنوب منطقة منكوبة زراعيا نتيجة العدوان الإسرائيلي الذيnbsp; يتسبب يوميا باحراق عشرات الدونمات من الاحراش والأراضي والمحاصيل الزراعيةnbsp;وتضرر 790 هكتاراnbsp;من الأراضي الزراعيةnbsp;والف وحدة سكنية و340 والف رأس ماشية، ما يعني ان الخسائر كبيرة وكبيرة جدا نتيجة هذا العدوان الذي استخدم الفوسفور الأبيضnbsp;ودمر 1000 وحدة سكنيةnbsp;في الجنوب، من هنا نشكر مجلس الوزراء ووزير الزراعة ونطالب بتعويضnbsp; المزارعين، مما يستحقون نتيجة هذه الخسائر ،ونتمنى دعم ورعاية النازحين من الجنوب الذين لم تلتفت اليهم الدولة مع المزارعين الالتفات المطلوب بالتعويض والدعم والمؤازرة لان القطاع الزراعي هو الركيزة الأساسية للاقتصاد اللبنانيquot;. وختم: quot;اننا اذ نحيي راعي نهضة الجنوب الأولnbsp;والريادي في التنمية والمقاومة الرئيس نبيه بري الذيnbsp;يحمي اللبنانيين والجنوبيين وهو الاقدر على المطالبة بحقوق الجنوبيين والمزارعينquot;. nbsp; nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp;nbsp; ========م.ع.ش.nbsp;\",\n            \"content\": \"ONLY AVAILABLE IN PAID PLANS\",\n            \"pubDate\": \"2024-04-05 10:56:55\",\n            \"image_url\": null,\n            \"source_id\": \"nna_leb\",\n            \"source_priority\": 1754928,\n            \"source_url\": \"https://www.nna-leb.gov.lb/ar\",\n            \"source_icon\": \"https://i.bytvi.com/domain_icons/nna_leb.png\",\n            \"language\": \"arabic\",\n            \"country\": [\n                \"lebanon\"\n            ],\n            \"category\": [\n                \"top\"\n            ],\n            \"ai_tag\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"sentiment\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"sentiment_stats\": \"ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS\",\n            \"ai_region\": \"ONLY AVAILABLE IN CORPORATE PLANS\"\n        }\n    ],\n    \"pagination\": {\n        \"currentPage\": 1,\n        \"totalPages\": 11,\n        \"hasNextPage\": true,\n        \"hasPrevPage\": false,\n        \"totalItems\": 109,\n        \"limit\": 10\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODIxZjU3YTNmYzBiMGZkYTE5MjIzZDciLCJpYXQiOjE3NDcwNTYxMzEsImV4cCI6MTc3ODYxMzczMX0.0dHR_KLQnnHoABwXcaMm0X8BPePYu2zIytLmf1xqkG4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/api/products",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/products",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1621"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"655-qLS7QYtYj2X6JXEK1IIlVW7qqwU\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 May 2025 13:29:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"location\": {\n                \"name\": \"Dummy Place\",\n                \"longitude\": 35.12345,\n                \"latitude\": 33.56789\n            },\n            \"_id\": \"67fd1d575b1f98c94f6b1ee4\",\n            \"title\": \"iPhone 16 Pro\",\n            \"description\": \"Amazing iphone\",\n            \"price\": 1500,\n            \"images\": [\n                {\n                    \"url\": \"/uploads/products/1744641367563-261951214.png\",\n                    \"_id\": \"67fd1d575b1f98c94f6b1ee5\"\n                },\n                {\n                    \"url\": \"/uploads/products/1744641367567-147386557.png\",\n                    \"_id\": \"67fd1d575b1f98c94f6b1ee6\"\n                }\n            ],\n            \"user\": {\n                \"_id\": \"679a576283014eef8d123938\",\n                \"email\": \"test@eurisko.net\"\n            },\n            \"createdAt\": \"2025-04-14T14:36:07.572Z\",\n            \"updatedAt\": \"2025-04-14T14:36:07.572Z\",\n            \"__v\": 0\n        },\n        {\n            \"location\": {\n                \"name\": \"Dummy Place\",\n                \"longitude\": 35.12345,\n                \"latitude\": 33.56789\n            },\n            \"_id\": \"67fd167304ae475fe4182c14\",\n            \"title\": \"iPhone 16 Pro\",\n            \"description\": \"Amazing iphone\",\n            \"price\": 1500,\n            \"images\": [\n                {\n                    \"url\": \"/uploads/products/1744639603030-229103275.png\",\n                    \"_id\": \"67fd167304ae475fe4182c15\"\n                }\n            ],\n            \"user\": {\n                \"_id\": \"679a576283014eef8d123938\",\n                \"email\": \"test@eurisko.net\"\n            },\n            \"createdAt\": \"2025-04-14T14:06:43.034Z\",\n            \"updatedAt\": \"2025-04-14T14:06:43.034Z\",\n            \"__v\": 0\n        },\n        {\n            \"location\": {\n                \"name\": \"Dummy Place\",\n                \"longitude\": 35.12345,\n                \"latitude\": 33.56789\n            },\n            \"_id\": \"67f77e866ef080fc2f21c3fa\",\n            \"title\": \"iPhone 14 Pro edited\",\n            \"description\": \"Amazing iphone\",\n            \"price\": 1500,\n            \"images\": [\n                {\n                    \"url\": \"/uploads/products/1744273030679-269556949.png\",\n                    \"_id\": \"67f77e866ef080fc2f21c3fb\"\n                },\n                {\n                    \"url\": \"/uploads/products/1744273030679-273658769.png\",\n                    \"_id\": \"67f77e866ef080fc2f21c3fc\"\n                }\n            ],\n            \"user\": {\n                \"_id\": \"679a576283014eef8d123938\",\n                \"email\": \"test@eurisko.net\"\n            },\n            \"createdAt\": \"2025-04-10T08:17:10.685Z\",\n            \"updatedAt\": \"2025-04-14T14:36:17.067Z\",\n            \"__v\": 0\n        }\n    ],\n    \"pagination\": {\n        \"currentPage\": 1,\n        \"totalPages\": 1,\n        \"hasNextPage\": false,\n        \"hasPrevPage\": false,\n        \"totalItems\": 3,\n        \"limit\": 10\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "products search",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODIxZjU3YTNmYzBiMGZkYTE5MjIzZDciLCJpYXQiOjE3NDcwNTYxMzEsImV4cCI6MTc3ODYxMzczMX0.0dHR_KLQnnHoABwXcaMm0X8BPePYu2zIytLmf1xqkG4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{https}}/api/products/search?query=iphone",
+					"host": [
+						"{{https}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "iphone"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "products search",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{https}}/api/products/search?query=iphone",
+							"host": [
+								"{{https}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "iphone"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 May 2025 13:29:40 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"629-X3HEJ3VRmi7L7fFxMPf+YhFOuyE\""
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=CglpUhPZLB0gO9ActhOTgqeusg4F%2BkDjgQXXn2dbQn0NvxGXvIG9xwx4H2MW5FGs4Ov3ydPY%2FbFPHWy9lJVcU9H9OzBN915Ih7H4spu18Gy4WVGYP1Ar4MDPWqNWg7jOw9Dgyh2HPD%2FPOGZK2S0%3D\"}]}"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "93ea4429e838e1a0-MRS"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"location\": {\n                \"name\": \"Dummy Place\",\n                \"longitude\": 35.12345,\n                \"latitude\": 33.56789\n            },\n            \"_id\": \"67fd1d575b1f98c94f6b1ee4\",\n            \"title\": \"iPhone 16 Pro\",\n            \"description\": \"Amazing iphone\",\n            \"price\": 1500,\n            \"images\": [\n                {\n                    \"url\": \"/uploads/products/1744641367563-261951214.png\",\n                    \"_id\": \"67fd1d575b1f98c94f6b1ee5\"\n                },\n                {\n                    \"url\": \"/uploads/products/1744641367567-147386557.png\",\n                    \"_id\": \"67fd1d575b1f98c94f6b1ee6\"\n                }\n            ],\n            \"user\": {\n                \"_id\": \"679a576283014eef8d123938\",\n                \"email\": \"test@eurisko.net\"\n            },\n            \"createdAt\": \"2025-04-14T14:36:07.572Z\",\n            \"updatedAt\": \"2025-04-14T14:36:07.572Z\",\n            \"__v\": 0,\n            \"score\": 1.4166666666666665\n        },\n        {\n            \"location\": {\n                \"name\": \"Dummy Place\",\n                \"longitude\": 35.12345,\n                \"latitude\": 33.56789\n            },\n            \"_id\": \"67fd167304ae475fe4182c14\",\n            \"title\": \"iPhone 16 Pro\",\n            \"description\": \"Amazing iphone\",\n            \"price\": 1500,\n            \"images\": [\n                {\n                    \"url\": \"/uploads/products/1744639603030-229103275.png\",\n                    \"_id\": \"67fd167304ae475fe4182c15\"\n                }\n            ],\n            \"user\": {\n                \"_id\": \"679a576283014eef8d123938\",\n                \"email\": \"test@eurisko.net\"\n            },\n            \"createdAt\": \"2025-04-14T14:06:43.034Z\",\n            \"updatedAt\": \"2025-04-14T14:06:43.034Z\",\n            \"__v\": 0,\n            \"score\": 1.4166666666666665\n        },\n        {\n            \"location\": {\n                \"name\": \"Dummy Place\",\n                \"longitude\": 35.12345,\n                \"latitude\": 33.56789\n            },\n            \"_id\": \"67f77e866ef080fc2f21c3fa\",\n            \"title\": \"iPhone 14 Pro edited\",\n            \"description\": \"Amazing iphone\",\n            \"price\": 1500,\n            \"images\": [\n                {\n                    \"url\": \"/uploads/products/1744273030679-269556949.png\",\n                    \"_id\": \"67f77e866ef080fc2f21c3fb\"\n                },\n                {\n                    \"url\": \"/uploads/products/1744273030679-273658769.png\",\n                    \"_id\": \"67f77e866ef080fc2f21c3fc\"\n                }\n            ],\n            \"user\": {\n                \"_id\": \"679a576283014eef8d123938\",\n                \"email\": \"test@eurisko.net\"\n            },\n            \"createdAt\": \"2025-04-10T08:17:10.685Z\",\n            \"updatedAt\": \"2025-04-14T14:36:17.067Z\",\n            \"__v\": 0,\n            \"score\": 1.375\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "product by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzlhNTc2MjgzMDE0ZWVmOGQxMjM5MzgiLCJpYXQiOjE3MzgxNjgxODUsImV4cCI6MTc2OTcyNTc4NX0.ZJdQQqq5JFiXDDrdQmqqaBBJI3p3IG8XBDacQUnkHwQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{https}}/api/products/67f77e866ef080fc2f21c3fa",
+					"host": [
+						"{{https}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"67f77e866ef080fc2f21c3fa"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "product by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{https}}/api/products/67f77e866ef080fc2f21c3fa",
+							"host": [
+								"{{https}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"67f77e866ef080fc2f21c3fa"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 May 2025 13:29:58 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"228-7cUjO59gXzedNrkiYWnQltl9m8Y\""
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=m4YpsuIS3vbAyLdfKovKoWnhRjtwMJHtvrfzWMj%2FIoaSt0ag8WfQx8hAF9MTQdNUS%2BRtKjWpqHYaWaZFMh0LQrgI2Mp5G2yIegkJfP8Z6LymD%2BwRaqQDJTnhWyo1FH9lNHZFXHkauYMTtaLIYTg%3D\"}]}"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "93ea449e8e59e1a0-MRS"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"location\": {\n            \"name\": \"Dummy Place\",\n            \"longitude\": 35.12345,\n            \"latitude\": 33.56789\n        },\n        \"_id\": \"67f77e866ef080fc2f21c3fa\",\n        \"title\": \"iPhone 14 Pro edited\",\n        \"description\": \"Amazing iphone\",\n        \"price\": 1500,\n        \"images\": [\n            {\n                \"url\": \"/uploads/products/1744273030679-269556949.png\",\n                \"_id\": \"67f77e866ef080fc2f21c3fb\"\n            },\n            {\n                \"url\": \"/uploads/products/1744273030679-273658769.png\",\n                \"_id\": \"67f77e866ef080fc2f21c3fc\"\n            }\n        ],\n        \"user\": {\n            \"_id\": \"679a576283014eef8d123938\",\n            \"email\": \"test@eurisko.net\"\n        },\n        \"createdAt\": \"2025-04-10T08:17:10.685Z\",\n        \"updatedAt\": \"2025-04-14T14:36:17.067Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "add product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODIxZjU3YTNmYzBiMGZkYTE5MjIzZDciLCJpYXQiOjE3NDcwNTYxMzEsImV4cCI6MTc3ODYxMzczMX0.0dHR_KLQnnHoABwXcaMm0X8BPePYu2zIytLmf1xqkG4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Macbook pro",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "M3 macbook",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "2300",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "{\"name\":\"Dummy Place\",\"longitude\":35.12345,\"latitude\":33.56789}",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": [
+								"/Users/fouadbakour/Downloads/macbook2.jpeg",
+								"/Users/fouadbakour/Downloads/macbook1.jpeg"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "{{https}}/api/products",
+					"host": [
+						"{{https}}"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Macbook pro",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "M3 macbook",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "2300",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "{\"name\":\"Dummy Place\",\"longitude\":35.12345,\"latitude\":33.56789}",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/Users/fouadbakour/Downloads/macbook2.jpeg",
+										"/Users/fouadbakour/Downloads/macbook1.jpeg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{https}}/api/products",
+							"host": [
+								"{{https}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 12 May 2025 13:32:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "506"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"1fa-iXsO3L4+soAq0xWbOqMtAe7+TuM\""
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=LXOmDad68OQUorFFx1RmyWGhMXBIbn5TcVuToXQAC4Y4CDElw%2BRAj%2FFPOUkUJ3W7YykOnjBi3JOSusLlTFXGcQMxh6frLGbbZPEgfor9QZEPPHwbn0vLyeTqG6EX9uOBapliukIn50eDMXBTi7c%3D\"}]}"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "93ea48337914e219-MRS"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"title\": \"Macbook pro\",\n        \"description\": \"M3 macbook\",\n        \"price\": 2300,\n        \"images\": [\n            {\n                \"url\": \"/uploads/products/1747056745562-977229220.jpeg\",\n                \"_id\": \"6821f8693fc0b0fda1922419\"\n            },\n            {\n                \"url\": \"/uploads/products/1747056745562-593772355.jpeg\",\n                \"_id\": \"6821f8693fc0b0fda192241a\"\n            }\n        ],\n        \"location\": {\n            \"name\": \"Dummy Place\",\n            \"longitude\": 35.12345,\n            \"latitude\": 33.56789\n        },\n        \"user\": \"6821f57a3fc0b0fda19223d7\",\n        \"_id\": \"6821f8693fc0b0fda1922418\",\n        \"createdAt\": \"2025-05-12T13:32:25.566Z\",\n        \"updatedAt\": \"2025-05-12T13:32:25.566Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "edit product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzlhNTc2MjgzMDE0ZWVmOGQxMjM5MzgiLCJpYXQiOjE3MzgxNjgxODUsImV4cCI6MTc2OTcyNTc4NX0.ZJdQQqq5JFiXDDrdQmqqaBBJI3p3IG8XBDacQUnkHwQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "iPhone 14 Pro edited",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Amazing iphone",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1500",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "{\"name\":\"Dummy Place\",\"longitude\":35.12345,\"latitude\":33.56789}",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": [
+								"/Users/fouadbakour/Desktop/Screenshot 2025-04-09 at 6.09.08 PM.png",
+								"/Users/fouadbakour/Desktop/Screenshot 2025-04-09 at 6.13.41 PM.png"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "{{https}}/api/products/6821f8693fc0b0fda1922418",
+					"host": [
+						"{{https}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"6821f8693fc0b0fda1922418"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzlhNTc2MjgzMDE0ZWVmOGQxMjM5MzgiLCJpYXQiOjE3MzgxNjgxODUsImV4cCI6MTc2OTcyNTc4NX0.ZJdQQqq5JFiXDDrdQmqqaBBJI3p3IG8XBDacQUnkHwQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "iPhone 14 Pro edited",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Amazing iphone",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1500",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "Adma",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": [
+								"/Users/fouadbakour/Desktop/Screenshot 2025-04-09 at 6.09.08 PM.png",
+								"/Users/fouadbakour/Desktop/Screenshot 2025-04-09 at 6.13.41 PM.png"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "{{https}}/api/products/67f68e87ffd545cb67e80495",
+					"host": [
+						"{{https}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"67f68e87ffd545cb67e80495"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
